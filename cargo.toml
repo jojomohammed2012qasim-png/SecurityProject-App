@@ -1,12 +1,10 @@
 [package]
-name = "black_king"
-version = "1.0.0"
+name = "security_project"
+version = "0.1.0"
 edition = "2021"
 authors = ["Jana Mohammed"]
-description = "Ultra-Fast 64-bit Air-Gapped Security & Isolation System"
+description = "Black King Ultra-Fast Security Engine & Dashboard UI"
 
-[profile.release]
-opt-level = 3
-lto = true
-codegen-units = 1
-panic = "abort"
+[dependencies]
+eframe = "0.27.2"
+egui = "0.27.2"
