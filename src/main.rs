@@ -11,9 +11,11 @@
 // =================================================================
 
 mod usb_shield;
+mod network_sever;
 
 use std::time::Instant;
 use usb_shield::UsbDevice;
+use network_sever::NetworkGuard;
 
 fn main() {
     let execution_timer = Instant::now();
@@ -28,6 +30,10 @@ fn main() {
     // --- Active Port Interception (USB Shield Module) ---
     let usb_device = UsbDevice::scan_and_lock(1);
     usb_device.route_to_sandbox();
+
+    // --- Air-Gap Network Controller ---
+    let mut net_guard = NetworkGuard::new();
+    net_guard.sever_all_connections();
 
     // --- Threat Identification ---
     let detected_threat: &str = "USB_Payload_X9.exe";
