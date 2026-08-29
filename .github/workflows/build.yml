@@ -9,17 +9,17 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Install Rust
-      uses: dtolnay/rust-toolchain@stable
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
 
-    - name: Build Release Exe
-      run: cargo build --release
+      - name: Build Release Exe
+        run: cargo build --release
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: BlackKingSecurity-Exe
-        path: target/release/*.exe
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: BlackKingSecurity-Exe
+          path: target/release/*.exe
