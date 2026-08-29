@@ -12,10 +12,12 @@
 
 mod usb_shield;
 mod network_sever;
+mod deception_engine;
 
 use std::time::Instant;
 use usb_shield::UsbDevice;
 use network_sever::NetworkGuard;
+use deception_engine::DeceptionEngine;
 
 fn main() {
     let execution_timer = Instant::now();
@@ -34,6 +36,10 @@ fn main() {
     // --- Air-Gap Network Controller ---
     let mut net_guard = NetworkGuard::new();
     net_guard.sever_all_connections();
+
+    // --- Station 1: Deception Engine Matrix ---
+    let mut deception_matrix = DeceptionEngine::new();
+    deception_matrix.deploy_honeypot();
 
     // --- Threat Identification ---
     let detected_threat: &str = "USB_Payload_X9.exe";
