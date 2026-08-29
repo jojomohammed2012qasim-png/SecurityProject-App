@@ -10,7 +10,7 @@
 // =================================================================
 
 mod usb_shield;
-mod network_sever;
+mod network_server;
 mod deception_engine;
 mod dark_zone;
 mod purge_engine;
