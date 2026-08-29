@@ -1,0 +1,23 @@
+{
+  "title": "👑 BLACK KING",
+  "subtitle": "Ultra Security Suite v1.0",
+  "dashboard": "📊 Dashboard",
+  "threats": "🛡️ Threat Center",
+  "settings": "⚙️ Settings",
+  "status_title": "Real-Time System Security Status",
+  "status_ok": "100% SAFE & FULLY PROTECTED",
+  "status_desc": "All 3 Engine Stations are active with zero latency.",
+  "stations_title": "Engine Stations",
+  "st1": "✔ Station 1: Deception Engine",
+  "st2": "✔ Station 2: Dark Zone Air-Gap Isolation",
+  "st3": "✔ Station 3: AES-256 Memory Purge",
+  "telemetry_title": "Performance Telemetry",
+  "speed": "⏱ Execution Speed: 0.015 μs",
+  "ram": "💻 RAM Usage: 0.00%",
+  "cpu": "⚡ CPU Load: 0.00%",
+  "alerts": {
+    "usb_blocked": "🛑 Suspicious USB Device Blocked Immediately!",
+    "threat_neutralized": "⚔️ Intrusion Attempt Neutralized on Port 433.",
+    "memory_purged": "🧹 System Memory Purged & Logs Encrypted."
+  }
+}
