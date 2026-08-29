@@ -13,12 +13,14 @@
 mod usb_shield;
 mod network_sever;
 mod deception_engine;
+mod dark_zone;
 mod purge_engine;
 
 use std::time::Instant;
 use usb_shield::UsbDevice;
 use network_sever::NetworkGuard;
 use deception_engine::DeceptionEngine;
+use dark_zone::DarkZoneLock;
 use purge_engine::PurgeEngine;
 
 fn main() {
@@ -42,6 +44,10 @@ fn main() {
     // --- Station 1: Deception Engine Matrix ---
     let mut deception_matrix = DeceptionEngine::new();
     deception_matrix.deploy_honeypot();
+
+    // --- Station 2: Dark Zone Lock & Kernel Isolation ---
+    let mut dark_zone = DarkZoneLock::new();
+    dark_zone.engage_dark_zone();
 
     // --- Threat Identification ---
     let detected_threat: &str = "USB_Payload_X9.exe";
