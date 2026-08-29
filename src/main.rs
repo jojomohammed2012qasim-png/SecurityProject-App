@@ -13,11 +13,13 @@
 mod usb_shield;
 mod network_sever;
 mod deception_engine;
+mod purge_engine;
 
 use std::time::Instant;
 use usb_shield::UsbDevice;
 use network_sever::NetworkGuard;
 use deception_engine::DeceptionEngine;
+use purge_engine::PurgeEngine;
 
 fn main() {
     let execution_timer = Instant::now();
@@ -46,10 +48,9 @@ fn main() {
     println!("\n[!] THREAT DETECTED: {}", detected_threat);
     println!("[i] Host System Footprint: 0.00% RAM / 0.00% CPU");
 
-    // --- Security Pipeline Execution ---
-    execute_station_1_sandbox(detected_threat);
-    execute_station_2_dark_zone();
-    execute_station_3_analysis_and_clean();
+    // --- Station 3: Deep Analysis & Secure Purge ---
+    let mut purge_controller = PurgeEngine::new();
+    purge_controller.execute_secure_purge(detected_threat);
 
     // --- Performance Summary ---
     let elapsed_time = execution_timer.elapsed();
@@ -57,29 +58,4 @@ fn main() {
     println!(" [✔] FINAL STATUS: Threat Safely Neutralized & Purged.");
     println!(" [⏱] Execution Speed: {:.2?} (Microseconds)", elapsed_time);
     println!("============================================================");
-}
-
-/// Station 1: Sandboxing & Deceptive Data Injection
-fn execute_station_1_sandbox(target_file: &str) {
-    println!("\n[▶] STATION 1: Sandboxing & Deception Layer");
-    println!("    ├─ File isolated: '{}'", target_file);
-    println!("    ├─ Injecting fake system registry & decoy user data...");
-    println!("    └─ [!] Alert: Threat accessed decoy data -> Identity Flagged!");
-}
-
-/// Station 2: Air-Gapped Isolation, Network Severing & Dark Zone
-fn execute_station_2_dark_zone() {
-    println!("\n[▶] STATION 2: Air-Gapped Dark Zone Isolation");
-    println!("    ├─ Network Interface: Completely severed (Zero Traffic).");
-    println!("    ├─ Display Environment: Dark Zone Lock (Blank Interface).");
-    println!("    └─ Buffer Wall Status: 100% Isolated from OS Kernel & Core Files.");
-}
-
-/// Station 3: Deep Analysis, Source Tracking & Secure Purge
-fn execute_station_3_analysis_and_clean() {
-    println!("\n[▶] STATION 3: Deep Analysis & Source Tracking");
-    println!("    ├─ Threat Classification: High-Severity Malicious Payload.");
-    println!("    ├─ Origin Source Identified: Removable Storage Device.");
-    println!("    ├─ Encryption Shield: Host Memory Secured via AES-256-GCM.");
-    println!("    └─ [✔] Purging Sandbox Memory -> Threat Completely Destroyed.");
 }
