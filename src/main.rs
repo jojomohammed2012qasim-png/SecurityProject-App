@@ -10,7 +10,10 @@
 // Unauthorized replication or reverse engineering is strictly prohibited.
 // =================================================================
 
+mod usb_shield;
+
 use std::time::Instant;
+use usb_shield::UsbDevice;
 
 fn main() {
     let execution_timer = Instant::now();
@@ -21,6 +24,10 @@ fn main() {
     println!("          Advanced Air-Gapped Multi-Station Protection      ");
     println!("          Developer & Patent Owner: Jana Mohammed           ");
     println!("============================================================");
+
+    // --- Active Port Interception (USB Shield Module) ---
+    let usb_device = UsbDevice::scan_and_lock(1);
+    usb_device.route_to_sandbox();
 
     // --- Threat Identification ---
     let detected_threat: &str = "USB_Payload_X9.exe";
