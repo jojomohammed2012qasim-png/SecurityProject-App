@@ -11,8 +11,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          path: '.'
+
+      - name: Set working directory or check files
+        run: dir
 
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
