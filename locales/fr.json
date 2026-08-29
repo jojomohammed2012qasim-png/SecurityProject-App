@@ -1,0 +1,21 @@
+{
+  "title": "👑 BLACK KING",
+  "subtitle": "Suite de Sécurité v1.0",
+  "dashboard": "📊 Tableau de Bord",
+  "threats": "🛡️ Centre de Menaces",
+  "settings": "⚙️ Paramètres",
+  "status_title": "État de Sécurité du Système",
+  "status_ok": "100% SÉCURISÉ ET PROTÉGÉ",
+  "status_desc": "Les 3 stations du moteur sont actives sans latence.",
+  "stations_title": "Stations du Moteur",
+  "st1": "✔ Station 1: Moteur de Leurre",
+  "st2": "✔ Station 2: Isolation Zone Sombre",
+  "st3": "✔ Station 3: Purge Mémoire AES-256",
+  "telemetry_title": "Télémétrie de Performance",
+  "speed": "⏱ Vitesse d'exécution: 0.015 μs",
+  "ram": "💻 Utilisation RAM: 0.00%",
+  "cpu": "⚡ Charge CPU: 0.00%",
+  "alerts": {
+    "usb_blocked": "🛑 Périphérique USB suspect bloqué !"
+  }
+}
