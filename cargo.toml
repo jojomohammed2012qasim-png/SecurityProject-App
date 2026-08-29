@@ -8,3 +8,5 @@ description = "Black King Ultra-Fast Security Engine & Dashboard UI"
 [dependencies]
 eframe = "0.27.2"
 egui = "0.27.2"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
