@@ -1,6 +1,6 @@
 // =================================================================
 // PROJECT: Black King (Ultra-Fast Security System & GUI Dashboard)
-// ARCHITECTURE: 64-bit Desktop GUI Engine (Native Rust)
+// ARCHITECTURE: 32-bit Desktop GUI Engine (Native Rust)
 // PERFORMANCE: Microsecond Execution | Zero System Impact (0% RAM/CPU)
 // -----------------------------------------------------------------
 // INTELLECTUAL PROPERTY & PATENT NOTICE:
