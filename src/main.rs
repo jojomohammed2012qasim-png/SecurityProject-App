@@ -16,6 +16,7 @@ mod dark_zone;
 mod purge_engine;
 mod security_logger;
 mod app_ui;
+mod localization; // <--- أضفنا محرك اللغات الملكي هنا بانسجام تام!
 
 use app_ui::BlackKingApp;
 use eframe::egui;
